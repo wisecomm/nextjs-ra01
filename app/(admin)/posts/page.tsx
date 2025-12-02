@@ -41,7 +41,7 @@ export default function PostsPage() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 p-6">
       <div className="max-w-7xl mx-auto space-y-6">
         <div className="flex items-center gap-4">
-          <Link href="/dashboard">
+          <Link href="/welcome">
             <Button variant="ghost" size="icon">
               <ArrowLeft className="w-5 h-5" />
             </Button>

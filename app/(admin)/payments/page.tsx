@@ -6,15 +6,25 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { generatePayments } from "@/lib/mock";
+import { useState, useEffect } from "react";
+import { Payment } from "./columns";
 
 export default function PaymentsPage() {
-  const data = generatePayments(100);
+  const [data, setData] = useState<Payment[]>([]);
+
+  useEffect(() => {
+    // Simulate async data fetching to avoid hydration mismatch and synchronous state update warning
+    const timer = setTimeout(() => {
+      setData(generatePayments(100));
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 p-6">
       <div className="max-w-7xl mx-auto space-y-6">
         <div className="flex items-center gap-4">
-          <Link href="/dashboard">
+          <Link href="/welcome">
             <Button variant="ghost" size="icon">
               <ArrowLeft className="w-5 h-5" />
             </Button>
