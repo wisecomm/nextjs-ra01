@@ -1,6 +1,6 @@
-import { Sidebar } from "@/components/dashboard/sidebar";
-import { Header } from "@/components/dashboard/header";
-import { Footer } from "@/components/dashboard/footer";
+import { Sidebar } from "@/components/layout-admin/sidebar";
+import { Header } from "@/components/layout-admin/header";
+import { Footer } from "@/components/layout-admin/footer";
 
 export default function AdminLayout({
     children,
