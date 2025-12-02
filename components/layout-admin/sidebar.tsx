@@ -80,7 +80,7 @@ export function Sidebar() {
                             {sidebarItems.map((item) => {
                                 const Icon = item.icon;
                                 return (
-                                    <Tooltip key={item.href} delayDuration={0}>
+                                    <Tooltip key={item.href}>
                                         <TooltipTrigger asChild>
                                             <Link
                                                 href={item.href}
@@ -107,7 +107,7 @@ export function Sidebar() {
                         </nav>
                     </div>
                     <div className="mt-auto p-4 border-t">
-                        <Tooltip delayDuration={0}>
+                        <Tooltip>
                             <TooltipTrigger asChild>
                                 <Link
                                     href="/logout"
